@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    height: 100vh;
+}
+
+.back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    height: 35%;
+    background: url('../images/pattern-bg.png');
+    background-position: center;
+    background-size: cover;
+}
+
+
+    .back h1 {
+        font-size: 25px;
+        font-weight: 500;
+        color: #fff; 
+        text-shadow: 3px 2px 10px #00000070;
+        padding-top: 15px;
+    }
+
+
+    .back .pesquisa {
+        display: flex;
+        width: 450px;
+        height: 50px;
+    }
+
+    .pesquisa input {
+        display: flex;
+        flex: 1;
+        padding: 0 15px;
+        font-size: 15px;
+        font-family: 'Rubik', sans-serif;
+        border: 0;
+        border-bottom-left-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+
+    .pesquisa input:focus {
+        outline: 0;
+        border: 0;
+    }
+
+    .pesquisa input::placeholder {
+        background-color: #fff;
+    }
+
+    .pesquisa button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 55px;
+        background-color: #2b2b2b;
+        border: 0;
+        cursor: pointer;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .pesquisa:hover button {
+        background-color: hsl(0, 0%, 59%);
+    }
+
+        .pesquisa img {
+            width: 10px;
+            height: auto;
+        }
+
+
+
+    .back .ip_info {
+        z-index: 2;
+        display: flex;
+        width: 80%;
+        transform: translateY(53%);
+        background-color: #FFF;
+        padding: 30px 20px;
+        border-radius: 15px;
+        box-shadow: 0px 2px 20px 0px #3838386b;
+    }
+
+        .ip_info div {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            margin: 0 15px;
+        }
+
+        .ip_info div:not(div:nth-child(4)) {
+            border-right: 1px solid hsl(0, 0%, 73%);
+        }
+
+        .ip_info h3 {
+            font-size: 12px;
+            color: hsl(0, 0%, 60%);
+            margin: 0 0 10px 0;
+        }
+
+        .ip_info span {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+
+
+
+
+#map {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    flex: 1;
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+}
+
+#map .message {
+    z-index: -1;
+    display: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: #2b2b2b;
+    color: #fff;
+    font: 15px;
+}
+
+
+
+.attribution { font-size: 14px; text-align: center; padding: 8px 0;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+
+
+
+/*----------------------- MEDIA QUERY -------------------------*/
+
+@media (max-width: 425px) {
+    
+    .back h1 {
+        font-size: 30px;
+        margin-top: 60px;
+        margin-bottom: 0px;
+    }
+
+    .back .pesquisa {
+        width: 80%;
+        position: absolute;
+    }
+
+    .back .ip_info { 
+        flex-direction: column;
+        padding: 18px 20px;
+    }
+
+    .ip_info div:not(div:nth-child(4)) {
+        border-right: 0;
+    }
+
+    .ip_info div {
+        align-items: center;
+        margin: 0 0;
+        margin-bottom: 20px;
+    }
+
+    .leaflet-touch .leaflet-bar {
+        display: none;
+    }
+
+}
