@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
+</head>
+<body>
+
+  <main>
+
+    <section class="back">
+
+      <h1>IP Address Tracker</h1>
+
+      <form class="pesquisa">
+        <input type="text" id="ip" placeholder="Search for any IP address or domain">
+        <button><img src="images/icon-arrow.svg"></button>
+      </form>
+
+      <div class="ip_info">
+
+        <div class="infos">
+          <h3>IP ADDRESS</h3>
+          <span class="ip">-</span>
+        </div>
+
+        <div class="infos">
+          <h3>LOCATION</h3>
+          <span class="loc">-</span>
+        </div>
+
+        <div class="infos">
+          <h3>TIMEZONE</h3>
+          <span class="zone">-</span>
+        </div>
+
+        <div class="infos">
+          <h3>ISP</h3>
+          <span class="isp">-</span>
+        </div>
+      </div>
+
+    </section>
+
+
+
+
+    <div id="map">
+      <div class="message">Carregando...</div>
+    </div>
+
+  </main>
+
+
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+
+
+
+
+
+    <script src="assets/js/script.js"></script>
+
+
+  </div>
+</body>
+</html>
